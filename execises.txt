@@ -1,0 +1,3 @@
+Step1: create form input user (name, phone, address, status)
+Step2: Create save button
+Step3: Show data in table
