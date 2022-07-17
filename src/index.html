@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>A JavaScript project</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <script src="main.js"></script>
+  <h1 id="titleId">A JavaScript project</h1>
+  <div id="app"></div>
+  <!-- <button type="button" onclick="myFunction()">Click me</button> -->
+
+  <div id="showname">
+    Name: <input type="text" id="txtUserName">
+    <button type="button" onclick="showUserName()">click me</button>
+  </div>
+  <div id="textShow">
+    Users list on Website:  <p id="txtUserNameList">
+  </div>
+
+  <div id="stringName">
+    
+  </div>
+
+</body>
+</html>
+
+  <script>
+    var users = []
+
+    function myFunction() {
+      document.getElementById("titleId").style.color = "red";
+    }
+
+    function showUserName(){
+      var result = document.getElementById("txtUserName").value
+      users.push(result);
+      var usersCustom = ""
+      // \[1, 2, 3]
+      // after join("DEMO") ==> "1 demo 2 demmo 3"
+      usersCustom = users.join(' AND ');
+      document.getElementById('txtUserNameList').innerHTML = `<p>List name is: ${usersCustom} </p>`
+      
+
+      // alert(users);
+      // document.getElementById('').value = result
+      // document.getElementById('txtUserNameList').innerHTML = `<p> ${result} </p>`
+      // console.log(document.getElementById("txtUserName").value)
+    }
+
+
+    </script>
+    
+
