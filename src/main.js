@@ -1,26 +1,7 @@
-'use strict';
-
-function counter() {
-  let seconds = 100
-  setInterval(() => {
-    seconds = seconds - 1;
-    document.getElementById('titleId').innerHTML = `<p>New title for ${seconds} seconds.</p>`;
-  }, 1000);
+function showName() {
+  alert('hahaha');
+  // var results = document.getElementsByClassName('content_form_name_txt').value;
+  // document.getElementsByClassName('content_table').innerHTML = `<p>List name is: ${results}</p>`
 }
+showName();
 
-
-
-
-
-
-counter();
-
-var inputs = [0, 0, 30];
-
-function moreInput (inputs) {
-    return inputs * 3;
-}
-var newArray = inputs.map(moreInput);
-
-console.log(newArray);
-//BBBBBFGD

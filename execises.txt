@@ -1,3 +1,8 @@
-Step1: create form input user (name, phone, address, status)
-Step2: Create save button
-Step3: Show data in table
+Description of Execise:
+Step 1: Design the UI of website (Main layout of this project is Professional, with basic color)
+Step 2: The layout of this website will have 2 part. Part 1 is form to input data of users, part 2 is the data table. Its will show all of data of consumers.
+ - In part 1, the input form will have a Name, address, Phone number, status and the button 
+ - In part 2, the table will have 5 columns (delete, ID customers, Name, phone number, address, status)
+
+The reason when build this website, this is solution can reduce shipping risk, It can help shipper can reject false Shipping.
+

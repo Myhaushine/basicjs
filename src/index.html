@@ -4,53 +4,74 @@
   <title>Shipper Solution</title>
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet shorticon" href="">
+  <link rel="shortcut icon" href="./Img/logo.png">
+  <link rel="stylesheet" href="./themify-icons-font/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="./main.js">
 </head>
 <body>
-  <script src="main.js"></script>
-  <h1 id="titleId">A JavaScript project</h1>
-  <div id="app"></div>
-  <!-- <button type="button" onclick="myFunction()">Click me</button> -->
-
-  <div id="showname">
-    Name: <input type="text" id="txtUserName">
-    <button type="button" onclick="showUserName()">click me</button>
+  <div id="header">
+    <div class="header_box">
+      <img src="./Img/logo.png" alt="logo" class="header_logo">
+      <img src="./Img/Shipping Solution.png" alt="Name" class="header_box_name">
+    </div>
+    <div class="header_input">
+      <input type="text" class="header_input_txt">
+      <div class="header_input_icon ti-search"></div>
+    </div>
+    <div class="header_user ti-user"></div>
   </div>
-  <div id="textShow">
-    Users list on Website:  <p id="txtUserNameList">
+  <div id="content">
+    <div class="content_form">
+      <img src="./Img/background.png" alt="form" class="content_forming">
+      <div class="content_form_input_lbl">
+        <div class="content_form_input">
+          <div class="content_form_input_box"><p class="content_form_input_tag"> Full Name: </p><input type="text" id="txt_content_form_name" placeholder="Enter your name"></div>
+          <div class="content_form_input_box"><p class="content_form_input_tag"> Phone Number: </p><input type="text" id="txt_content_form_phone" placeholder="Enter your phone"></div>
+          <div class="content_form_input_box"><p class="content_form_input_tag"> Address:</p><input type="text" id="txt_content_form_address" placeholder="Enter your address"></div>
+          <div class="content_form_input_box"><p class="content_form_input_tag"> Status: </p><input type="text" id="txt_content_form_status" placeholder="Enter your status"></div>
+        </div>
+        <div class="content_form_input_button_lbl">
+          <p class="content_form_input_button_txt" type="button" onclick="addRowInTable()">Add Name</p>
+        </div>
+      </div>
+    <div id="content_table">
+      <table border="1" class="content_table_lbl" id="tableShowNameUser">
+        <tr>
+            <th colspan="5">NAME LIST OF CUSTOMERS</th>
+        </tr>
+        <tr>
+            <td>Full Name</td>
+            <td>Phone Number</td>
+            <td>Address</td>
+            <td>Status</td>
+            <td>Delete row</td>
+        </tr>
+    </table>
+    </div> 
   </div>
-
-  <div id="stringName">
-    
-  </div>
-
 </body>
+
+<script>
+
+  function addRowInTable() {
+    var fullNameOutput = document.getElementById('txt_content_form_name').value;
+    var fullPhoneOutput = document.getElementById('txt_content_form_phone').value;
+    var fullAddressOutput = document.getElementById('txt_content_form_address').value;
+    var fullStatusOutput = document.getElementById('txt_content_form_status').value;
+    
+    var table = document.getElementById('tableShowNameUser');
+    var addRow = table.insertRow(2);
+    var cell1 = addRow.insertCell(0);
+    var cell2 = addRow.insertCell(1);
+    var cell3 = addRow.insertCell(2);
+    var cell4 = addRow.insertCell(3);
+    cell1.innerHTML = fullNameOutput;
+    cell2.innerHTML = fullPhoneOutput;
+    cell3.innerHTML = fullAddressOutput;
+    cell4.innerHTML = fullStatusOutput;
+  }
+</script>
 </html>
 
-  <script>
-    var users = []
-
-    function myFunction() {
-      document.getElementById("titleId").style.color = "red";
-    }
-
-    function showUserName(){
-      var result = document.getElementById("txtUserName").value
-      users.push(result);
-      var usersCustom = ""
-      // \[1, 2, 3]
-      // after join("DEMO") ==> "1 demo 2 demmo 3"
-      usersCustom = users.join(' AND ');
-      document.getElementById('txtUserNameList').innerHTML = `<p>List name is: ${usersCustom} </p>`
-      
-
-      // alert(users);
-      // document.getElementById('').value = result
-      // document.getElementById('txtUserNameList').innerHTML = `<p> ${result} </p>`
-      // console.log(document.getElementById("txtUserName").value)
-    }
-
-
-    </script>
-    
+ 
 
